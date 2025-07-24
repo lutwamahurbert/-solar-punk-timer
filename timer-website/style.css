@@ -1,0 +1,121 @@
+body {
+    background: linear-gradient(135deg, #e0ffe6 0%, #b3e6ff 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.timer-container {
+    background: linear-gradient(120deg, #fffbe6 0%, #e6ffe6 100%);
+    padding: 2.5rem 3.5rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(60, 180, 120, 0.15), 0 1.5px 8px rgba(0,0,0,0.07);
+    text-align: center;
+    border: 2px solid #aee9c5;
+    min-width: 340px;
+}
+
+h1 {
+    color: #2e7d32;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+#display {
+    font-size: 3.2rem;
+    margin: 1.5rem 0 1rem 0;
+    letter-spacing: 2px;
+    color: #388e3c;
+    background: linear-gradient(90deg, #e0ffe6 60%, #fffbe6 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.07);
+    padding: 0.5rem 0;
+}
+
+.quote-area {
+    margin: 1.5rem 0 1rem 0;
+    padding: 1.2rem 1rem 1rem 1.2rem;
+    background: linear-gradient(90deg, #e6ffe6 60%, #fffbe6 100%);
+    border-left: 6px solid #ffd600;
+    border-radius: 14px;
+    min-height: 90px;
+    box-shadow: 0 2px 8px rgba(255, 214, 0, 0.08);
+    transition: box-shadow 0.3s;
+}
+
+#quote {
+    font-size: 1.15rem;
+    font-style: italic;
+    margin: 0 0 0.5rem 0;
+    color: #388e3c;
+}
+
+#author {
+    font-size: 1rem;
+    color: #388e3c;
+    display: block;
+    text-align: right;
+    opacity: 0.8;
+}
+
+.buttons {
+    margin-top: 1.2rem;
+}
+
+.buttons button {
+    font-size: 1.1rem;
+    padding: 0.6rem 2.2rem;
+    margin: 0 0.7rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #aee9c5 0%, #ffd600 100%);
+    color: #205c2c;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.10);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    outline: none;
+    position: relative;
+    z-index: 1;
+}
+
+.buttons button:hover {
+    background: linear-gradient(90deg, #ffd600 0%, #aee9c5 100%);
+    color: #1b4d23;
+    box-shadow: 0 4px 16px 2px #b3e6ff80, 0 2px 8px rgba(46, 125, 50, 0.13);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.buttons button:active {
+    background: linear-gradient(90deg, #fffbe6 0%, #aee9c5 100%);
+    color: #205c2c;
+    box-shadow: 0 1px 4px rgba(46, 125, 50, 0.10);
+    transform: scale(0.98);
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    display: block;
+}
+
+@media (max-width: 500px) {
+    .timer-container {
+        padding: 1.2rem 0.5rem;
+        min-width: 0;
+    }
+    .buttons button {
+        margin: 0.5rem 0.2rem;
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+    }
+} 
