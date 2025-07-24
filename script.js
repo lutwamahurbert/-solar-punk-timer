@@ -356,4 +356,8 @@ function animatePark() {
     updateRodents();
     requestAnimationFrame(animatePark);
 }
-animatePark(); 
+animatePark();
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
